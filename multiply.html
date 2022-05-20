@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiply</title>
+</head>
+
+<body>
+    <script>
+        function mul(a, b) {
+            return a * b + "<br>";
+        };
+        document.write(mul(3, 4));
+
+        function multi(x) {
+            return function(y) {
+                return x * y;
+            }
+        };
+        document.write(multi(2)(2)); //4
+    </script>
+</body>
+
+</html>

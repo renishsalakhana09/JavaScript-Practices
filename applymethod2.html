@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Method with two different objects</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            num: 2
+
+        };
+        var obj2 = {
+            num: 5
+        };
+        var addTothis = function(a, b, c) {
+            return this.num + a + b + c + "<br>";
+        }
+        const arr = [10, 20, 30];
+        document.write(addTothis.apply(obj, arr)); //62
+        document.write(addTothis.apply(obj2, arr)); //65
+    </script>
+</body>
+
+</html>

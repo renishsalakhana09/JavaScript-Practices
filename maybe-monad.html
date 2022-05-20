@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maybe Monad</title>
+</head>
+
+<body>
+    <script>
+        var Maybe = MONAD(function(monad, value) {
+            if (value == null || value == undefined) {
+                monad.is_null = true;
+                monad.bind = function() {
+                    return monad;
+                }
+            }
+        });
+        var monad = Maybe(null);
+        monad.bind(alert);
+    </script>
+</body>
+
+</html>

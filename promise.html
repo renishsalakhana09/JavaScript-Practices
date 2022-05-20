@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises in JS</title>
+</head>
+
+<body>
+    <script>
+        let new_promise = new Promise((resolve, reject) => {
+            let a = 1 + 8;
+            if (a == 2) {
+                resolve("Success");
+
+            } else {
+                reject("Status Failed");
+            }
+        });
+        new_promise.then((message) => {
+            document.write("This is in then " + message)
+        }).catch((message) => {
+            document.write("This is in catch: " + message)
+        });
+    </script>
+</body>
+
+</html>

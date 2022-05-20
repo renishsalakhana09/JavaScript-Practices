@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currying with no bunch of variables</title>
+</head>
+
+<body>
+    <script>
+        var sayWhat = function(a) {
+            return function(b) {
+                return function(c) {
+                    return function(d) {
+                        return function(e) {
+                            return function(f) {
+                                return function(g) {
+                                    return function(h) {
+                                        document.write(a + " " + b + " " + c + " " + d + " " + e + " " + f + " " + g + " " + h);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        };
+        sayWhat('Hello')('Your')('Welcome')('Here!')('please')('have')('seat')('how are you?')
+    </script>
+</body>
+
+</html>

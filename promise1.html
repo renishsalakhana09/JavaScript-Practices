@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises in JS</title>
+</head>
+
+<body>
+    <script>
+        const userLeft = false;
+        const userWatchingCatMeme = true;
+
+        function watchTutorialCallback(errorCallback, Callback) {
+            if (userLeft) {
+                errorCallback({
+                    name: "userLeft",
+                    message: ':('
+
+                })
+            } else if (userWatchingCatMeme) {
+                errorCallback({
+                    name: 'user is watching cat meme',
+                    message: 'WebDevsSimplified < cat'
+                })
+            } else {
+                Callback('Thumps up and Subscribe')
+            }
+
+        };
+        watchTutorialCallback((message) => {
+            document.write('Success:' + message)
+        }, (error) => {
+            document.write(error.name + ' ' + error.message)
+        });
+    </script>
+</body>
+
+</html>

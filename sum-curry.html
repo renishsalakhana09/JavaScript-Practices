@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do addition using Currying function</title>
+</head>
+
+<body>
+    <script>
+        function add(a) {
+            return function(b) {
+                return function(c) {
+                    return function(d) {
+                        document.write(a + b + c + d);
+                    }
+                }
+            }
+        };
+        add(10)(20)(30)(40); //100
+    </script>
+</body>
+
+</html>
